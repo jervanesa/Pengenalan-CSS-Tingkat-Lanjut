@@ -1,0 +1,388 @@
+/* Ini CSS untuk mengatur variabel global */
+:root {
+    --main-color: #ffd95c; /* Warna utama */
+    --main-color-hover: #e6c34f;  /* Warna saat dihover */
+    --dark-color: #2b2b2b; /* Warna gelap */
+    --container-width: 1100px; /* Lebar kontainer */
+  }
+  
+  * {
+    box-sizing: border-box; /* Mengatur box-sizing secara global untuk semua elemen */
+  }
+  
+  html, /* Mengatur style dasar untuk elemen HTML dan body */
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;  /* Font untuk teks */
+  }
+  
+  h1 { /* Mengatur style untuk judul level 1 */
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;  /* Ukuran font judul */
+  }
+  
+  .button { /* Mengatur style untuk tombol */
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.3em;
+    padding: 0.7em 1.2em;
+    background-color: var(--main-color);  /* Warna latar belakang */
+    color: #464646; /* Warna teks */
+    border-radius: 30px; /* Bentuk sudut */
+    font-size: 1.1em;  /* Ukuran font */
+  } 
+  
+  .button:hover { /* Mengatur style untuk tombol saat dihover */
+    background-color: var(--main-color-hover); /* Warna latar belakang saat dihover */
+    color: #2e2a2a; /* Warna teks saat dihover */
+    transition: all 0.3s; /* Efek transisi */
+  }
+  
+  /* HEADER */
+  .nav-container { /* Mengatur style untuk bagian header */
+    background-color: var(--dark-color); /* Warna latar belakang */
+    position: sticky; /* Posisi melekat */
+    top: 0px;  /* Jarak dari atas */
+    z-index: 100; /* Indeks tumpukan */
+  }
+  
+  .nav-container header { /* Mengatur style untuk container header */
+    display: flex; /* Mengatur tampilan untuk elemen menjadi flex container */
+    flex-direction: row; /* Mengatur tata letak elemen menjadi baris */
+    justify-content: space-between; /* Mengatur penyebaran ruang di antara elemen flex secara merata */
+    width: 80%; /* Lebar */
+    height: 60px; /* Tinggi */
+    margin: 0 auto; /* Margin */
+  }
+  
+  .nav-container .logo img { /* Mengatur style untuk logo */
+    width: 180px; /* Lebar */
+    padding-top: 10px; /* Padding atas */
+  }
+  
+  .nav-container ul { /* Mengatur style untuk daftar navigasi */
+    list-style-type: none;   /* Menghilangkan jenis penomoran pada daftar */
+    margin: 0;   /* Menghilangkan margin pada daftar */
+    padding: 0;   /* Menghilangkan padding pada daftar */
+    display: flex;   /* Menjadikan daftar sebagai flex container */
+  } 
+  
+  .nav-container li a { /* Mengatur style untuk tautan navigasi */
+    display: block;
+    color: white; /* Warna teks */
+    padding: 0 1.1em; /* Padding */
+    text-decoration: none;
+    text-transform: uppercase;  /* Transformasi teks */
+    height: 60px; /* Tinggi */
+    line-height: 60px;  /* Tinggi baris */
+  }
+  
+  .nav-container li a:hover { /* Mengatur style untuk tautan navigasi saat dihover */
+    color: var(--main-color); /* Warna teks saat dihover */
+    transition: all 0.3s; /* Efek transisi */
+    border-bottom: 5px solid var(--main-color); /* Garis bawah saat dihover */
+  }
+  
+  .nav-container header label, /* Mengatur style untuk label dan hamburger (untuk responsif) */
+  #hamburger {
+    display: none; /* Tidak ditampilkan */
+  }
+  
+  /* END OF HEADER */
+  
+  /* HERO */
+  .hero-container { /* Mengatur style untuk bagian hero */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url("assets/images/logo2.jpg"); /* Gamar latar */
+    height: 70vh; /* Tinggi */
+    background-position: center; /* Posisi latar belakang */
+    background-repeat: no-repeat; /* Pengulangan latar belakang */
+    background-attachment: fixed; /* Lampiran latar belakang */
+    background-size: cover; /* Ukuran latar belakang */
+    display: flex; /* Mengatur tampilan menjadi flex */
+    align-items: center; /* Mengatur penempatan konten secara vertikal agar berada di tengah */
+    justify-content: center; /* Mengatur penempatan konten secara horizontal agar berada di tengah */
+  }
+  
+  .hero-text { /* Mengatur style untuk teks di hero */
+    text-align: center; /* Posisi teks */
+    color: white; /* Warna teks */
+    padding: 1rem; /* Padding */
+  }
+  
+  .hero-text h1 { /* Mengatur style untuk judul di hero */
+    font-size: 4em; /* Ukuran font judul */
+    color: var(--dark-color); /* Warna teks */
+  }
+  
+  .hero-text p { /* Mengatur style untuk paragraf di hero */
+    font-size: 2em; /* Ukuran font */
+    margin: 0;  /* Margin */
+    color: var(--dark-color); /* Warna teks */
+  }
+  /* END OF HERO */
+  
+  /* SHOWCASE */
+  .showcase-container:nth-child(even) { /* Mengatur style untuk bagian showcase */
+    background-color: #f0f0f0; /* Warna latar belakang */
+  }
+  
+  .showcase { /* Mengatur tampilan showcase */
+    display: flex; /* Menjadikan konten sebagai flex */
+    justify-content: space-between; /* Menyebarkan konten secara merata di antara elemen */
+    max-width: 1100px; /* Lebar maksimum */
+    margin: 0 auto; /* Margin */
+    padding: 2em; /* Padding */
+  }
+  
+  /* Mengatur tampilan gambar dan teks dalam showcase */
+  .showcase-image,
+  .showcase-text {
+    width: 100%; /* Lebar */
+    margin: 1em;  /* Margin */
+  }
+  
+  .showcase-image img { /* Mengatur tampilan gambar dalam showcase */
+    width: 100%; /* Lebar */
+    border: 1px solid silver; /* Garis */
+    padding: 0.3rem; /* Padding */
+  }
+  /* END OF SHOWCASE */
+  
+  /* BLOG */
+  .blog-container { /* Mengatur style untuk bagian blog */
+    max-width: var(--container-width); /* Lebar maksimum */
+    margin: 3rem auto; /* Margin */
+  }
+  
+  .blog-container header { /* Mengatur tampilan header dalam kontainer blog */
+    padding: 0 2em; /* Padding */
+    text-align: center; /* Posisi teks */
+  }
+  
+  .blog-container header hr { /* Mengatur tampilan garis horizontal dalam header kontainer blog */
+    width: 25%; /* Lebar */
+    border: 0;  /* Tidak ada border */
+    border-top: 1px solid #ddd; /* Garis atas */
+  }
+  
+  .blog-index { /* Mengatur tampilan indeks blog */
+    margin-top: 1rem;  /* Margin atas */
+    display: flex; /* Menjadikan konten sebagai flex */
+    flex-flow: row wrap; /* Tata letak flex menjadi baris dan wrap */
+    justify-content: space-between; /* Menyebarkan konten secara merata di antara elemen */
+    padding: 0 2%;  /* Padding 0 di atas dan bawah, 2% di kiri dan kanan */
+  }
+  
+  .blog-index .snippet { /* Mengatur tampilan cuplikan di dalam indeks blog */
+    width: 32%; /* Lebar */
+    margin-top: 1rem; /* Margin atas */
+    border: 1px solid #ddd; /* Garis */
+    border-radius: 0.25rem; /* Radius sudut */
+  }
+  
+  .blog-index .snippet-img { /* Mengatur tampilan gambar dalam cuplikan di dalam indeks blog */
+    width: 100%; /* Lebar */
+  }
+  
+  .blog-index .snippet-txt { /* Mengatur tampilan teks dalam cuplikan di dalam indeks blog */
+    padding: 0 1em; /* Padding*/
+
+  }
+  
+  .blog-index .snippet-txt small { /* Mengatur tampilan teks kecil dalam cuplikan di dalam indeks blog */
+    color: #999;  /* Warna teks kecil abu-abu */
+  }
+  /* END OF BLOG */
+  
+  /* FOOTER */
+  .footer-container { /* Mengatur tampilan kontainer footer */
+    margin-top: 3rem;  /* Jarak atas dari elemen di atasnya */
+    color: white; /* Warna teks putih */
+    background-color: var(--dark-color); /* Warna latar belakang menggunakan variabel CSS --dark-color */
+    padding: 2rem 1rem; /* Padding 2 rem di atas dan bawah, 1 rem di kiri dan kanan */
+  }
+  
+  .footer-container hr { /* Mengatur warna garis horizontal dalam footer */
+    color: #2e2a2a; /* Warna garis horizontal */
+  }
+  
+  .footer-container a { /* Mengatur tampilan tautan dalam footer */
+    text-decoration: none; /* Menghapus dekorasi tautan */
+    color: white;  /* Warna teks putih */
+  }
+  
+  .footer-container a:hover { /* Mengatur tampilan tautan saat dihover dalam footer */
+    text-decoration: underline; /* Mengatur dekorasi tautan saat dihover menjadi garis bawah */
+  }
+  
+  .footer-menu { /* Mengatur tampilan menu footer */
+    max-width: var(--container-width);  /* Lebar maksimum sesuai dengan variabel CSS --container-width */
+    margin: 0 auto 2rem;  /* Margin atas dan bawah auto, sisi kiri dan kanan auto */
+    display: flex; /* Menjadikan konten sebagai flex */
+    flex-flow: row wrap; /* Tata letak flex menjadi baris dan wrap */
+    justify-content: space-between; /* Menyebarkan konten secara merata di antara elemen */
+  }
+  
+  .footer-menu section { /* Mengatur lebar setiap bagian dalam menu footer */
+    width: 23%; /* Lebar setiap bagian menjadi 23% */
+  }
+  
+  .footer-menu ul { /* Mengatur tampilan daftar dalam menu footer */
+    list-style-type: none; /* Menghilangkan tanda bullet pada daftar */
+    margin: 0; /* Menghilangkan margin */
+    padding: 0; /* Menghilangkan padding */
+  }
+  
+  .footer-container ul li { /* Mengatur jarak bawah antara setiap elemen daftar dalam footer */
+    margin-bottom: 0.5rem; /* Memberikan margin bawah sebesar 0.5 rem */
+  }
+  
+  .footer-menu h3 { /* Mengatur margin atas dari judul h3 dalam menu footer */
+    margin-top: 0;  /* Menghapus margin atas */
+  }
+  
+  .logo-container img { /* Mengatur lebar gambar dalam kontainer logo */
+    width: 180px; /* Lebar gambar menjadi 180 piksel */
+  }
+  
+  .footer-copyright { /* Mengatur tampilan hak cipta dalam footer */
+    max-width: var(--container-width); /* Lebar maksimum sesuai dengan variabel CSS --container-width */
+    margin: 0 auto; /* Margin atas dan bawah auto, sisi kiri dan kanan auto */
+    display: flex;  /* Menjadikan konten sebagai flex */
+    flex-flow: row wrap;  /* Tata letak flex menjadi baris dan wrap */
+    justify-content: space-between;  /* Menyebarkan konten secara merata di antara elemen */
+    padding: 0.5rem; /* Padding 0.5 rem di semua sisi */
+  }
+  
+  .footer-copyright a { /* Mengatur jarak kiri antara setiap tautan di dalam hak cipta footer */
+    margin-left: 0.5rem; /* Memberikan margin kiri sebesar 0.5 rem */
+  }
+   
+  .footer-copyright a:hover { /* Mengatur tampilan tautan saat dihover dalam hak cipta footer */
+    text-decoration: none; /* Menghapus dekorasi tautan saat dihover */
+  }
+  /* END OF FOOTER */
+  
+  /* BREAKPOINT TABLET */
+  @media screen and (max-width: 768px) {
+    /* Kode CSS Di Sini */
+    /* HEADER */
+    .nav-container header label { /* Mengatur label dalam header */
+      display: inline-block; /* Menjadikan label sebagai inline-block */
+      color: white;  /* Warna teks putih */
+      font-style: normal;  /* Gaya teks normal */
+      font-size: 2rem;  /* Ukuran font 2 rem */
+      padding: 0.5rem; /* Padding 0.5 rem di semua sisi */
+      padding-left: 1rem; /* Padding kiri 1 rem */
+    }
+  
+    .nav-container header { /* Mengatur header */
+      width: 100%; /* Lebar header menjadi 100% */
+    }
+  
+    .nav-container nav ul { /* Mengatur ul dalam nav */
+      flex-direction: column;  /* Mengatur tata letak kolom untuk daftar navigasi */
+      width: 100%; /* Lebar ul menjadi 100% */
+      position: absolute;  /* Posisi absolut */
+      top: 60px; /* Jarak dari atas 60 piksel */
+      left: 0;  /* Meletakkan dari kiri */
+    }
+  
+    .nav-container li a { /* Mengatur tautan di dalam daftar navigasi */
+      display: block; /* Menjadikan tautan sebagai blok */
+      color: white; /* Warna teks putih */
+      background-color: var(--dark-color); /* Warna latar belakang menggunakan variabel CSS --dark-color */
+      padding: 0 2em; /* Padding 0 di atas dan bawah, 2em di kiri dan kanan */
+      text-decoration: none; /* Menghilangkan dekorasi tautan */
+      text-transform: uppercase;  /* Mengubah teks menjadi huruf besar */
+      height: auto;  /* Tinggi elemen menyesuaikan dengan konten */
+    }
+  
+    .nav-container li a:hover { /* Mengatur tautan di dalam daftar navigasi saat dihover */
+      border-bottom: none;  /* Menghapus garis bawah saat dihover */
+    }
+  
+    .nav-container .logo { /* Mengatur logo di dalam kontainer navigasi */
+      position: absolute;  /* Posisi absolut */
+      right: 0px;  /* Meletakkan logo di kanan */
+      z-index: 1000; /* Indeks z untuk menentukan urutan tumpukan */
+    }
+  
+    .nav-container .logo img { /* Mengatur gambar logo di dalam kontainer navigasi */
+      width: 80px;  /* Lebar gambar logo */
+    }
+  
+    .nav-container nav { /* Mengatur navigasi untuk disembunyikan secara default */
+      display: none; /* Menyembunyikan elemen nav */
+    }
+  
+    .nav-container header input:checked ~ nav { /* Mengatur tampilan navigasi saat input checkbox yang sesuai dicentang */
+      display: flex; /* Menampilkan elemen nav sebagai flex */
+    }
+  
+    /* END OF HEADER */
+  
+    /* HERO */
+    .hero-text h1 { /* Mengatur ukuran font dari teks h1 di dalam elemen hero-text */
+      font-size: 3em;
+    }
+    /* END OF HERO */
+  
+    /* SHOWCASE */
+    .showcase { /* Mengatur tata letak dari elemen showcase agar menjadi kolom */
+      flex-direction: column;
+      padding: 1em 2em; /* Memberikan padding 1em di atas dan bawah, serta 2em di kiri dan kanan */
+    }
+    /* Mengatur lebar dari elemen showcase-image dan showcase-text agar menyesuaikan konten */
+    .showcase-image,
+    .showcase-text {
+      width: auto;
+    }
+    /* END OF SHOWCASE */
+  
+    /* BLOG */
+    /* Mengatur lebar konten cuplikan di dalam indeks blog agar mengisi lebar layar dan memberikan margin 1rem di atas dan bawah serta 2rem di kiri dan kanan */
+    .blog-index .snippet {
+      width: 100% !important;
+      margin: 1rem 2rem;
+    }
+    /* END OF BLOG */
+  
+    /* FOOTER */
+    .footer-container { /* Mengatur padding dari kontainer footer */
+      padding: 2rem;
+    }
+    .footer-menu section { /* Mengatur lebar setiap bagian dalam menu footer agar menjadi 48% dari lebar parentnya */
+      width: 48% !important;
+      margin-bottom: 2rem; /* Memberikan margin bawah sebesar 2 rem */
+    }
+    .footer-copyright div { /* Memberikan margin bawah sebesar 2 rem pada setiap div di dalam bagian hak cipta footer */
+      margin-bottom: 2rem;
+    }
+    .footer-copyright a:first-child { /* Mengatur margin kiri pada link pertama di dalam bagian hak cipta footer menjadi 0 */
+      margin-left: 0;
+    }
+    /* END OF FOOTER */
+  }
+  
+  /* BREAKPOINT HANDPHONE */
+  @media screen and (max-width: 481px) {
+    /* Kode CSS Di Sini */
+    /* BLOG */
+    .blog-container .snippet {     /* Mengatur lebar konten cuplikan di dalam kontainer blog agar hampir mengisi lebar layar */
+      width: 98%;
+    }
+    .blog-index {     /* Mengatur posisi kontainer indeks blog agar terpusat di layar */
+      justify-content: center;
+    }
+    /* END OF BLOG */
+  
+    /* FOOTER */
+    .footer-menu section {     /* Mengatur lebar setiap bagian dalam menu footer agar mengisi lebar layar dan memberikan margin bawah sebesar 2 rem */
+      width: 100% !important;
+      margin-bottom: 2rem;
+    }
+    /* END OF FOOTER */
+  }
